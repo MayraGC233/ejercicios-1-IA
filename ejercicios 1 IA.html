@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🩺 Cuidar Mi Salud – Registro de Pacientes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 p-6 font-sans">
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md">
+    <h1 class="text-3xl font-bold text-center text-green-600 mb-6">
+      🏥 Clínica de Nutrición – Cuidar Mi Salud
+    </h1>
+
+    <!-- Formulario completo -->
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      
+      <!-- 👤 Sección: Datos del paciente -->
+      <h2 class="text-xl font-semibold col-span-2 text-gray-700">
+        👤 Información del Paciente
+      </h2>
+
+      <input type="text" placeholder="👨‍⚕️ Nombre completo" class="border p-2 rounded w-full" required />
+      <input type="number" placeholder="🎂 Edad" class="border p-2 rounded w-full" min="0" required />
+
+      <select class="border p-2 rounded w-full" required>
+        <option disabled selected>⚧️ Sexo</option>
+        <option>Femenino</option>
+        <option>Masculino</option>
+        <option>Otro</option>
+      </select>
+
+      <input type="text" placeholder="🩸 Tipo de sangre" class="border p-2 rounded w-full" />
+
+      <input type="text" placeholder="💼 Ocupación" class="border p-2 rounded w-full" />
+      <select class="border p-2 rounded w-full">
+        <option disabled selected>💍 Estado civil</option>
+        <option>Soltero(a)</option>
+        <option>Casado(a)</option>
+        <option>Divorciado(a)</option>
+        <option>Viudo(a)</option>
+      </select>
+
+      <input type="tel" placeholder="📞 Teléfono" class="border p-2 rounded w-full" />
+      <input type="email" placeholder="📧 Correo electrónico" class="border p-2 rounded w-full" />
+      <input type="text" placeholder="🆔 CURP" class="border p-2 rounded w-full" />
+      <input type="text" placeholder="🏠 Dirección" class="border p-2 rounded w-full" />
+
+      <textarea placeholder="📋 Historial médico (opcional)" class="border p-2 rounded w-full md:col-span-2" rows="2"></textarea>
+
+      <!-- 📅 Sección: Información de la cita -->
+      <h2 class="text-xl font-semibold col-span-2 text-gray-700 mt-4">
+        📅 Detalles de la Cita Médica
+      </h2>
+
+      <textarea placeholder="📝 Motivo de la cita" class="border p-2 rounded w-full md:col-span-2" rows="2" required></textarea>
+
+      <input type="text" placeholder="🤒 Tipo de enfermedad (si aplica)" class="border p-2 rounded w-full" />
+
+      <!-- 🚨 Nivel de urgencia actualizado -->
+      <select class="border p-2 rounded w-full" required>
+        <option disabled selected>🚨 Nivel de urgencia</option>
+        <option>Bajo</option>
+        <option>Moderado</option>
+        <option>Alto</option>
+      </select>
+
+      <label class="w-full">
+        <span class="block text-sm text-gray-600 mb-1">📆 Fecha deseada</span>
+        <input type="date" class="border p-2 rounded w-full" required />
+      </label>
+
+      <label class="w-full">
+        <span class="block text-sm text-gray-600 mb-1">⏰ Hora deseada</span>
+        <input type="time" class="border p-2 rounded w-full" required />
+      </label>
+
+      <!-- ✅ Botón -->
+      <button
+        type="submit"
+        class="bg-green-600 text-white font-semibold py-2 rounded mt-4 md:col-span-2 hover:bg-green-700 transition"
+      >
+        ✅ Registrar paciente y cita
+      </button>
+    </form>
+  </div>
+</body>
+</html>
